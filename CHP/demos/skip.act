@@ -1,0 +1,78 @@
+/*  																			   
+                skip
+                CHP demo
+								George Ore
+
+ Description:   This is a demo to demonstrate the use of the skip statement in CHP.
+                 
+ Operation:     For now, this program will be a simple infinite loop that skips.
+
+ Arguments:        None.
+
+ Return Values:    None.
+
+ Local Variables:  None.
+
+ Shared Variables: None.
+
+ Global Variables: None.
+
+ Input:            None.
+
+ Output:           None.
+
+ Error Handling:   None.
+
+ Registers Changed: None.
+
+ Stack Depth:      No stack.
+
+ Algorithms:       None.
+
+ Data Structures:  None
+
+ Known Bugs:		None.
+
+ Limitations:		None.
+
+ Revision History:	
+          07/24/24	George Ore	Created demo
+
+ Pseudo Code
+
+    //Node waits for a request and then acts upon the request with its IO
+    while(1){
+        skip;
+        log("nothing just happened");
+    }
+
+*/
+
+
+/*
+    Required Imports
+*/
+//      None.
+
+
+/*
+    Constants
+*/
+//      None.
+
+/*
+    Test code
+*/
+defproc demo () {
+// INITALIZATION
+    //      None.
+// MAIN
+   chp {
+        ∗[  //INFINITE LOOP
+        [   //UHHH WHAT DOES THIS DO JUST WAIT UNTIL SOMETHING HAPPENS???? CHECK BOOK
+            skip;
+            log("nothing just happened");
+        ]
+        ]
+    }
+}
