@@ -1,7 +1,7 @@
 /*  																			   
-                skip
-                CHP demo
-								George Ore
+        skip
+    CHP demo
+	George Ore
 
  Description:   This is a demo to demonstrate the use of the skip statement in CHP.
                  
@@ -67,12 +67,10 @@ defproc demo () {
 // INITALIZATION
     //      None.
 // MAIN
-   chp {
-        ∗[  //INFINITE LOOP
-        [   //UHHH WHAT DOES THIS DO JUST WAIT UNTIL SOMETHING HAPPENS???? CHECK BOOK
+    chp {
+        *[
             skip;
-            log("nothing just happened");
+            log("nothing just happened")
         ]
-        ]
-    }
+    }   
 }

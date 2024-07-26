@@ -1,0 +1,120 @@
+/*  																			   
+        assignment
+    CHP demo
+	George Ore
+
+ Description:   This is a demo to demonstrate the use of assignment 
+                statements in CHP.
+
+ Operation:     There will be two variables declared and their values 
+                will be logged both before and after the assignment.
+                Every possible assignment case will be displayed:
+                    - Normal int/bool assignment
+                    - Expression evaluation
+                    - Multiple assignment (WIP)
+
+ Arguments:        None.
+
+ Return Values:    None.
+
+ Local Variables:  number - temp variable to test the int primitive
+                   boolean - temp variable to test the boolean primitive
+
+ Shared Variables: None.
+
+ Global Variables: None.
+
+ Input:            None.
+
+ Output:           None.
+
+ Error Handling:   None.
+
+ Registers Changed: None.
+
+ Stack Depth:      No stack.
+
+ Algorithms:       None.
+
+ Data Structures:  None
+
+ Known Bugs:		None.
+
+ Limitations:		None.
+
+ Revision History:	
+          07/25/24	George Ore	Created demo
+
+ Pseudo Code
+    
+    // Preset the value of x to initalize to zero or "off"
+    number = 0;
+    boolean = false;
+    print("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x to one or "on"
+    number = 11;
+    boolean = true;
+    print("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x back to zero or "off" anc check it
+    number = 0;
+    boolean = false;
+    print("number: " , number , " boolean: " , boolean)
+
+
+*/
+
+
+/*
+    Required Imports
+*/
+//      None.
+
+
+/*
+    Constants
+*/
+//      None.
+
+/*
+    Test code
+*/
+defproc demo () {
+// INITALIZATION
+    int number;
+    bool boolean;
+
+    // int number2;
+    // bool boolean2;
+
+// MAIN
+    chp {
+
+    // Preset the value of x to initalize to zero or "off"
+    number := 0;
+    boolean := false;
+    log("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x to one or "on"
+    number := 11;
+    boolean := true;
+    log("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x back to zero or "off" anc check it
+    number := 0;
+    boolean := false;
+    log("number: " , number , " boolean: " , boolean);
+
+     // Now demo expresion evaluation
+    number := 2+5-(7*5)/1;
+    boolean := boolean = boolean;
+    log("number: " , number , " boolean: " , boolean);
+
+    // Now demo multiple assignment
+    // number, number2 := 7, 3;
+    // boolean, boolean2 := true, true;
+    // log("number: " , number , " boolean: " , boolean)
+
+   }   
+}

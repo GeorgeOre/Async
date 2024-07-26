@@ -1,0 +1,145 @@
+/*  																			   
+        guard
+    CHP demo
+	George Ore
+
+ Description:   This is a demo to demonstrate the use of deterministic 
+                and non deterministic guards in CHP.
+
+ Operation:     The program will have a main loop with a counter status 
+                variable to track the state of the program. Then there
+                is a deterministic guard statement block that will give
+                a certain response based on the current state of the
+                counter at that point. There will also be a subsequent
+                non-deterministic guard statement block that will
+                hold many statements that could be true at the same time.
+
+ Arguments:        None.
+
+ Return Values:    None.
+
+ Local Variables:  counter - temp variable to assert against
+
+ Shared Variables: None.
+
+ Global Variables: None.
+
+ Input:            None.
+
+ Output:           None.
+
+ Error Handling:   None.
+
+ Registers Changed: None.
+
+ Stack Depth:      No stack.
+
+ Algorithms:       None.
+
+ Data Structures:  None
+
+ Known Bugs:	   None.
+
+ Limitations:	   None.
+
+ Revision History:	
+          07/25/24	George Ore	Created demo
+
+ Pseudo Code
+    
+    // INITALIZATION
+    int counter;
+
+    // MAIN
+    chp {
+         counter := 0;
+         log("counter started at :", counter);
+
+        *[
+    //DETERMINISTIC GUARDS
+            [ counter >= 0 &  counter < 5 -> 
+                counter := counter + 1;
+                log("Deterministic block; counter is now :", counter)
+            [] counter >= 5 &  counter < 50 ->
+                counter := counter + 2;
+                log("Deterministic block; counter is now :", counter)
+            [] counter >= 50 & counter < 5000 ->
+                counter := (counter) * 2;
+                log("Deterministic block; counter is now :", counter)
+            []  (counter <= 1 | counter >= 5000) -> skip
+            ];
+
+    //NON DETERMINISTIC GUARDS
+            [| counter > 0 -> 
+                log("111111 NON-Deterministic block; counter is now :", counter)
+            [] counter > 5 ->
+                log("222222 NON-Deterministic block; counter is now :", counter)
+            [] counter > 50 ->
+                log("333333 NON-Deterministic block; counter is now :", counter)
+            []  (counter <= 1) -> skip
+            |]
+
+        ];
+
+            log("OUT OF THE LOOP, counter is now :", counter)
+
+   }
+ }
+
+
+*/
+
+
+/*
+    Required Imports
+*/
+//      None.
+
+
+/*
+    Constants
+*/
+//      None.
+
+/*
+    Test code
+*/
+defproc demo () {
+// INITALIZATION
+    int counter;
+
+// MAIN
+    chp {
+         counter := 0;
+         log("counter started at :", counter);
+
+        *[
+//DETERMINISTIC GUARDS
+            [ counter >= 0 &  counter < 5 -> 
+                counter := counter + 1;
+                log("Deterministic block; counter is now :", counter)
+            [] counter >= 5 &  counter < 50 ->
+                counter := counter + 2;
+                log("Deterministic block; counter is now :", counter)
+            [] counter >= 50 & counter < 5000 ->
+                counter := (counter) * 2;
+                log("Deterministic block; counter is now :", counter)
+            []  (counter < 0 | counter >= 5000) -> skip
+            ];
+
+//NON DETERMINISTIC GUARDS
+            [| counter > 0 -> 
+                log("111111 NON-Deterministic block; counter is now :", counter)
+            [] counter > 5 ->
+                log("222222 NON-Deterministic block; counter is now :", counter)
+            [] counter > 50 ->
+                log("333333 NON-Deterministic block; counter is now :", counter)
+            []  (counter <= 1) -> skip
+            |]
+
+        ];
+
+            log("OUT OF THE LOOP, counter is now :", counter)
+
+   }
+}

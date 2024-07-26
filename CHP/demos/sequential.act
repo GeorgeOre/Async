@@ -1,0 +1,93 @@
+/*  																			   
+        assertion
+    CHP demo
+	George Ore
+
+ Description:   This is a demo to demonstrate the use of assertion 
+                statements in CHP.
+
+ Operation:     The program will have many print status messages with
+                an assertion in the middle. There will then be a false
+                assertion.
+
+ Arguments:        None.
+
+ Return Values:    None.
+
+ Local Variables:  number - temp variable to assert against
+
+ Shared Variables: None.
+
+ Global Variables: None.
+
+ Input:            None.
+
+ Output:           None.
+
+ Error Handling:   None.
+
+ Registers Changed: None.
+
+ Stack Depth:      No stack.
+
+ Algorithms:       None.
+
+ Data Structures:  None
+
+ Known Bugs:		WIP THIS IS NOT WORKING RN YOU GOTTA ASK SALLY OR LEO
+
+ Limitations:		None.
+
+ Revision History:	
+          07/25/24	George Ore	Created demo
+
+ Pseudo Code
+    
+    // Preset the value of x to initalize to zero or "off"
+    number = 0;
+    boolean = false;
+    print("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x to one or "on"
+    number = 11;
+    boolean = true;
+    print("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x back to zero or "off" anc check it
+    number = 0;
+    boolean = false;
+    print("number: " , number , " boolean: " , boolean)
+
+
+*/
+
+
+/*
+    Required Imports
+*/
+//      None.
+
+
+/*
+    Constants
+*/
+//      None.
+
+/*
+    Test code
+*/
+defproc demo () {
+// INITALIZATION
+    //None.
+
+// MAIN
+    chp {
+
+    log("first");
+    log("second");
+    log("third");
+    log("fourth");
+    log("fifth")
+    
+   }
+}

@@ -1,0 +1,123 @@
+/*  																			   
+        Euclid
+    CHP example program
+	George Ore
+
+ Description:   This is a demo that implements Euclid's algorithm for 
+                finding the GCD of two values in CHP.
+
+ Operation:     The program will 
+
+ Arguments:        None.
+
+ Return Values:    None.
+
+ Local Variables:  number - temp variable to assert against
+
+ Shared Variables: None.
+
+ Global Variables: None.
+
+ Input:            None.
+
+ Output:           None.
+
+ Error Handling:   None.
+
+ Registers Changed: None.
+
+ Stack Depth:      No stack.
+
+ Algorithms:       None.
+
+ Data Structures:  None
+
+ Known Bugs:		WIP THIS IS NOT WORKING RN YOU GOTTA ASK SALLY OR LEO
+
+ Limitations:		None.
+
+ Revision History:	
+          07/25/24	George Ore	Created demo
+
+ Pseudo Code
+    
+    // Preset the value of x to initalize to zero or "off"
+    number = 0;
+    boolean = false;
+    print("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x to one or "on"
+    number = 11;
+    boolean = true;
+    print("number: " , number , " boolean: " , boolean);
+
+    // Set the value of x back to zero or "off" anc check it
+    number = 0;
+    boolean = false;
+    print("number: " , number , " boolean: " , boolean)
+
+
+*/
+
+
+/*
+    Required Imports
+*/
+//      None.
+
+
+/*
+    Constants
+*/
+// int X = 2894;
+// int Y = 324;
+
+/*
+    Test code
+*/
+defproc main () {
+// INITALIZATION
+    int X, Y;
+
+    int gcd;
+    int x, y;
+
+// MAIN
+    chp {
+        X := 224;
+        Y := 324;
+
+        // Assert that the  constants are greater than 0
+        // [X > 0 & Y > 0];
+        // log("Confirmed constants are :", X, " and ", Y);
+
+        // Set the variables x and y to X and Y
+        x := X;
+        y := Y;
+
+        log("Confirmed constants are :", X, " and ", Y);
+
+        *[
+            [ (x > y & y != 0) -> 
+                x := x - y;
+                log(x, " is less than ", y)
+            [] (x < y & y != 0) ->
+                y := y - x;
+                log(x, " is greater than ", y)
+            [] x = y ->
+                y := y - x;
+                log("Ok your GCD is ", x, "!!!!")
+            [] y = 0 ->
+                skip
+            ]
+
+        // [x = gcd(X,Y)]
+        // log("Ok maybe your GCD i s:", x)
+
+
+        ];
+
+            log("OUT OF THE LOOP")
+
+   }
+}
